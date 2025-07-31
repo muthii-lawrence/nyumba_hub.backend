@@ -1,9 +1,12 @@
 services:
   - type: web
-    name: rental-listings-backend
+    name: backend
     env: node
     buildCommand: npm install
-    startCommand: npm start
+    startCommand: node server.js
     envVars:
-      - key: NODE_ENV
-        value: production
+      - key: SUPABASE_URL
+        sync: false
+      - key: SUPABASE_KEY
+        sync: false
+      
